@@ -13,6 +13,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.pug',
     }),
+    new HtmlWebpackPlugin({
+    filename: 'about.html',
+    template: './src/about.pug'
+  })
   ],
   output: {
     path: path.resolve(__dirname, 'dist'), //ПАПКА куда кладет файл js
@@ -37,7 +41,14 @@ module.exports = {
         },
       	{ 
         test: /\.pug$/,
-        use: ["pug-loader"]
+        use: [
+          {
+          loader: 'pug-loader',
+            options: {
+              pretty: true
+            }
+          },
+        ]
         },
       	{
           test: /\.(woff|woff2|eot|ttf|otf)$/,
