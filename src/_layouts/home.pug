@@ -1,5 +1,3 @@
-block variables
-
 doctype html
 html(lang="en")
     head
@@ -7,8 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Global
     body
-      include ../_partials/header.pug
       block content
-      include ../_partials/footer.pug
       each js in htmlWebpackPlugin.files.js
+        - console.log(htmlWebpackPlugin.files)
         script(type='text/javascript', src=js)
