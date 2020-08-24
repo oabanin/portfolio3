@@ -1,10 +1,12 @@
-doctype
+block variables
+
+doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title Global
     body
-    include ../_partials/header.pug
-    p Gome Content
-    include ../_partials/footer.pug
+      include ../_partials/header.pug
+      block content
+      include ../_partials/footer.pug

@@ -17,13 +17,14 @@ function generateHtmlPlugins (templateDir) {
     // Create new HTMLWebpackPlugin with options
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
+      inject: false,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
     })
   })
 }
 
 // Call our function on our views directory.
-const htmlPlugins = generateHtmlPlugins('./src/_layouts')
+const htmlPlugins = generateHtmlPlugins('./src/pages')
 
 module.exports = {
   entry: {  
