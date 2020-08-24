@@ -6,6 +6,8 @@ html(lang="en")
         title Global
     body
       block content
+      - console.log(htmlWebpackPlugin.files)
       each js in htmlWebpackPlugin.files.js
-        - console.log(htmlWebpackPlugin.files)
         script(type='text/javascript', src=js)
+      each css in htmlWebpackPlugin.files.css
+        link(rel="stylesheet", href=css)

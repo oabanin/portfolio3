@@ -8,17 +8,40 @@ import './sass/style.scss';
 import $ from 'jquery';
 
 import 'jquery-mousewheel';
-import 'jquery-touchswipe'; 
+import 'jquery-touchswipe';
 import 'slick-carousel';
 
 
 const initPageSlider = () => {
-    $('.page-slider--js').slick();
+  const $slider = $('.page-slider--js');
+
+  $slider.slick({
+    arrows: false,
+    vertical: true,
+    infinite: false,
+  });
+
+  $slider.mousewheel(function (e) {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      $(this).slick('slickNext');
+    }
+    else {
+      $(this).slick('slickPrev');
+    }
+  });
+
+  $slider.swipe({
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      console.log(event);
+    }
+  });
 
 
 };
 
-$(document).ready(function (){
+$(document).ready(function () {
   initPageSlider();
 });
 
