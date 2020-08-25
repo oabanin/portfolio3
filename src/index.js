@@ -33,9 +33,15 @@ const initPageSlider = () => {
 
   $slider.swipe({
     //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      console.log(event);
-    }
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction === "up") {
+        $(this).slick('slickNext');
+      }
+      else if (direction === "down") {
+        $(this).slick('slickPrev');
+      }
+    },
+    threshold: 50
   });
 
 
