@@ -30,8 +30,8 @@ const htmlPlugins = generateHtmlPlugins('./src/pages')
 module.exports = {
   entry: {
     application: './src/index.js',
-    print: './src/print.js',
-    //style: './src/sass/style.scss'
+    //print: './src/print.js',
+    styles: './src/sass/style.scss'
   },
   mode: 'development',
   plugins: [
