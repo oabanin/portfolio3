@@ -31,18 +31,18 @@ module.exports = {
   entry: {
     application: './src/index.js',
     //print: './src/print.js',
-    styles: './src/sass/style.scss'
+    //styles: './src/sass/style.scss'
   },
   mode: 'development',
   plugins: [
     new CleanWebpackPlugin(),
-    
+
     new MiniCssExtractPlugin({
-      filename:  '[name].[hash].css',
-      chunkFilename:  '[id].[hash].css',
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css',
     }),
 
-    
+
     // new HtmlWebpackPlugin({
     //   template: './src/_layouts/home.pug',
     // }),
@@ -66,10 +66,39 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-        },
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].[hash].[ext]', //if [path] path goes from src, node_modules etc.
+            },
+          },
+          //  Image compress
+          // {
+          //   loader: 'image-webpack-loader',
+          //   options: {
+          //     mozjpeg: {
+          //       progressive: true,
+          //       quality: 65
+          //     },
+          //     // optipng.enabled: false will disable optipng
+          //     optipng: {
+          //       enabled: false,
+          //     },
+          //     pngquant: {
+          //       quality: [0.65, 0.90],
+          //       speed: 4
+          //     },
+          //     gifsicle: {
+          //       interlaced: false,
+          //     },
+          //     // the webp option will enable WEBP
+          //     // webp: {
+          //     //   quality: 75
+          //     // }
+          //   }
+          // },
+        ],
       },
       {
         test: /\.pug$/,
@@ -88,9 +117,13 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader',
-        ],
+        use: [{
+	            loader: 'file-loader',
+	            options: {
+	              name: 'fonts/[name].[hash].[ext]', //if [path] path goes from src, node_modules etc.
+	            },
+	          },
+        	],
       },
 
       // //Compile SCSS to separateCSS without Plugin

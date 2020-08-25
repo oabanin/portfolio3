@@ -14,8 +14,8 @@ $slick-loader-path: "~slick-carousel/slick/";
 
 @import "_variables";
 @import "_base";
+
+@import "components/_text.scss";
 @import "components/_page-slider.scss";
 
-.slick-prev:before, .slick-next:before{
-    color:red;
-}
+

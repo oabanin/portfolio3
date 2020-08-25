@@ -1,3 +1,31 @@
 .page-slider__slide{
     height: 100vh;
+
+    .page-slider-1-top {
+        background: url('../img/slide1-bg.png') no-repeat top right;
+        background-size: contain;
+        border-bottom: 1px solid rgba(#fff,.1);
+    }
+
+    h1 {
+        padding-top: 60px;
+        max-width: 440px;
+        padding-bottom: 200px;
+    }
+}
+
+
+
+
+//DELETE
+.col-md-9{
+    border: 1px solid orange;
+}
+
+.row{
+    border: 1px solid white;
+}
+    
+.col-md-8 {
+    border: 1px solid orange;
 }
