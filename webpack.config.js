@@ -176,7 +176,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     overlay: true,
-    port: 9000,
+    port: 9001,
     open: true //открыть браузер по окончанию старта сервера
   }
 };

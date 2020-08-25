@@ -14,8 +14,10 @@ $slick-loader-path: "~slick-carousel/slick/";
 
 @import "_variables";
 @import "_base";
+@import "_placeholders";
 
 @import "components/_text.scss";
+@import "components/_buttons.scss";
 @import "components/_page-slider.scss";
 
 

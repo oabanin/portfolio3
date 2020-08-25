@@ -1,16 +1,71 @@
 .page-slider__slide{
     height: 100vh;
+}
 
-    .page-slider-1-top {
-        background: url('../img/slide1-bg.png') no-repeat top right;
-        background-size: contain;
-        border-bottom: 1px solid rgba(#fff,.1);
+.page-slider-1-top {
+    position: relative;
+    background: url('../img/slide1-bg.png') no-repeat top right;
+    background-size: contain;
+    border-bottom: 1px solid rgba(#fff,.1);
+    padding-left: 15px;
+    margin-bottom: 35px;
+
+    &::after{
+        @extend %pseudo;
+        bottom: -6px;
+        left:15px;
+        z-index: 999;
+
+        width: 30px;
+        height: 6px;
+        border-top: 1px solid $color-accent-border-top;
+        border-bottom: 1px solid $color-accent-border-bottom;
+        background-color: $color-accent;
     }
-
+    
     h1 {
         padding-top: 60px;
         max-width: 440px;
         padding-bottom: 200px;
+    }
+
+    .hire-btn {
+        width: 90px;
+        height: 30px;
+
+        background-color: $color-accent;
+        color: $color-font;
+        border: none;
+        padding: 0;;
+
+        text-transform: uppercase;
+
+        &:hover {
+            width: 100px;
+        }
+
+    }
+
+}
+
+
+.page-slider-1-bottom {
+    padding-left: 15px;
+    cursor: pointer;
+
+    .text-widget{
+        opacity: .1;
+        transition: opacity .2s linear;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        max-width: 270px;
+        max-height: 90px;
+
+        &:hover{
+            opacity: 1; 
+        } 
+        
     }
 }
 
@@ -18,7 +73,7 @@
 
 
 //DELETE
-.col-md-9{
+.col-md-4{
     border: 1px solid orange;
 }
 
@@ -26,6 +81,10 @@
     border: 1px solid white;
 }
     
-.col-md-8 {
-    border: 1px solid orange;
+.col-md-9 {
+    border: 1px solid rgb(255, 0, 191);
+}
+
+.col-md-1 {
+    border: 1px solid aqua;
 }
