@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 // We need Nodes fs module to read directory contents
 const fs = require('fs');
@@ -41,6 +42,7 @@ module.exports = {
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
     }),
+    // new HtmlWebpackInlineSVGPlugin(),
 
 
     // new HtmlWebpackPlugin({
@@ -100,6 +102,8 @@ module.exports = {
           // },
         ],
       },
+
+
       {
         test: /\.pug$/,
         use: [
@@ -110,10 +114,6 @@ module.exports = {
             }
           },
         ]
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -138,6 +138,13 @@ module.exports = {
       //     'sass-loader'
       //   ]
       // },
+
+      
+      { 
+        test: /\.svg$/, 
+        loader: 'svg-inline-loader' 
+      },
+
 
       {
         test: /\.scss$/,

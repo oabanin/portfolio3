@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "html-webpack-inline-svg-plugin": "^2.3.0",
     "jquery": "^3.5.1",
     "jquery-mousewheel": "^3.1.13",
     "jquery-touchswipe": "^1.6.19",

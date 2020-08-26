@@ -3,3 +3,10 @@
     display: block;
     position: absolute;
 }
+
+%button-base {
+	display: inline-block;
+
+	text-decoration: none;
+    text-transform: uppercase;
+}
