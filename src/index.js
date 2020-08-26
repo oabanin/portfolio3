@@ -42,7 +42,38 @@ const initPageSlider = () => {
 
 };
 
+const initWorkSlider = () => {
+  const $slider = $('.js-work-slider');
+
+  $slider.slick({centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+}
+
 $(document).ready(function () {
   initPageSlider();
+  initWorkSlider();
 });
 

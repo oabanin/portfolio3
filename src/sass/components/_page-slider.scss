@@ -2,6 +2,19 @@
     height: 100vh;
 }
 
+.page-slider--js {
+    &.slick-vertical .slick-slide {
+        border: 0;
+    }
+}
+
+.container-fluid {
+    &.set-max-width{
+        max-width: 1600px;
+    }
+}
+
+
 .page-slider-1-top {
     position: relative;
     background: url('../img/slide1-bg.png') no-repeat top right;
