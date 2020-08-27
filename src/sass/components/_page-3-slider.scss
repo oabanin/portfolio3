@@ -1,0 +1,123 @@
+.slider-3-top {
+    position: relative;
+    padding-bottom: 90px;
+
+    &:before{
+        @extend %pseudo;
+        top:0;
+        left: 34%;
+
+        border: 6px solid $color-accent; 
+        border-left-color: transparent;
+        border-top-color: transparent;
+        transform: rotate(165deg)
+    }
+    h1 {
+        padding-top: 34px;
+        &:before{
+            @extend %pseudo;
+            
+            top:28%;
+            left: 71%;
+
+            width: 10px;
+            height: 10px;
+
+            background-color: $color-accent;
+            transform: rotate(45deg)
+        }
+
+        .slider-3_tittle{
+            position: relative;
+            &:before {
+                @extend %pseudo;
+                top: 0;
+                left: -10%;
+
+                background-color: $color-accent;
+                border-radius: 50%;
+
+                height: 31px;
+                width: 31px;
+            }
+        }
+
+        .slider-3_point{
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        .slider-3_point:after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            left: 10px;
+
+            width: 10px;
+            height: 10px;
+
+            background-color: $color-accent;
+        }     
+    }
+
+    .career-btn{
+        @extend %button-base;
+
+        svg {
+            position: relative;
+            left: 5px;
+            transition: left .2s ease-in-out;
+        }
+
+        &:hover{
+            svg {
+                left: 15px;
+            }
+
+        }
+        
+    }
+}
+
+
+.slider-3-bottom {
+}
+// .page-slider-1-bottom {
+//     padding-left: 15px;
+//     cursor: pointer;
+
+//     .text-widget{
+//         opacity: .1;
+//         transition: opacity .2s linear;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+
+//         max-width: 270px;
+//         max-height: 90px;
+
+//         &:hover{
+//             opacity: 1; 
+//         } 
+        
+//     }
+// }
+
+
+
+
+// //DELETE
+// .col-md-4{
+//     border: 1px solid orange;
+// }
+
+// .row{
+//     border: 1px solid white;
+// }
+    
+// .col-md-9 {
+//     border: 1px solid rgb(255, 0, 191);
+// }
+
+// .col-md-1 {
+//     border: 1px solid aqua;
+// }

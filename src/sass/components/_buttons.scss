@@ -34,8 +34,6 @@
         }
     }
 
-
-
     span,
     svg {
         position: relative;
@@ -54,4 +52,8 @@
 
     }
 
+}
+
+.career-btn{
+    @extend %button-base;
 }
