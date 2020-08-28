@@ -1,6 +1,6 @@
 .slider-3-top {
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: 70px;
 
     &:before{
         @extend %pseudo;
@@ -17,8 +17,8 @@
         &:before{
             @extend %pseudo;
             
-            top:28%;
-            left: 71%;
+            top: 100px;
+            left: 440px;
 
             width: 10px;
             height: 10px;
@@ -62,7 +62,7 @@
 
     .career-btn{
         @extend %button-base;
-
+        color: $color-font;
         svg {
             position: relative;
             left: 5px;
@@ -70,6 +70,11 @@
         }
 
         &:hover{
+            
+            span {
+                color: $color-font;
+            }
+            
             svg {
                 left: 15px;
             }
@@ -77,11 +82,67 @@
         }
         
     }
+
+    .slide3-bg{
+        position:absolute;
+        z-index:-1;
+        top:-10px; 
+        left: 100%;
+    }
 }
 
 
 .slider-3-bottom {
+
+    .slider-3_slide {
+        display:block;
+        max-width:195px;
+        margin: 0 auto;
+
+
+        .slider-3-photo {
+            border: 10px solid $color-accent;
+            background: center no-repeat url('/src/img/about1.jpg');
+            background-size: cover;
+            height: 100px;
+
+            
+
+        }
+        .slider-3-text {
+            @extend %button-base;
+            font-weight: 700;
+            color: $color-font;
+
+            position:relative;
+            left: 18px;
+            top: -10px;
+
+            transition: top .2s linear;
+
+         
+
+
+        }
+        &:hover {
+            .slider-3-text {
+                top: 0px;
+
+            }
+        }
+    }
+
+
 }
+
+.overflow-hidden {
+    overflow:hidden;
+       text-overflow: ellipsis;
+            white-space: nowrap;
+}
+
+
+
 // .page-slider-1-bottom {
 //     padding-left: 15px;
 //     cursor: pointer;

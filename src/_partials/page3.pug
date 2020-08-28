@@ -13,12 +13,19 @@
           a(href="#").career-btn
             span Career
             include ../../src/img/arrow-right.svg
+          img(src=require("../../src/img/slide3-bg.png").default, class="slide3-bg")
 
         .slider-3-bottom
           .row
-            .col-md-4
-              .slider-3-photo 1
-            .col-md-4
-              .slider-3-photo 2 
-            .col-md-4
-              .slider-3-photo 3
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text Winners
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text Philosophy
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text History
