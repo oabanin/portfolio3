@@ -1,0 +1,31 @@
+.page-slider__slide.d-flex.align-items-center
+  .container-fluid.set-max-width
+    .row
+      .col
+        .slider-3-top
+          h1.text-title-lg
+            |We <br>
+            |believe 
+            span.slider-3_tittle i
+            | n
+            | passionate 
+            span.slider-3_point people
+          a(href="#").career-btn
+            span Career
+            include ../../src/img/arrow-right.svg
+          img(src=require("../../src/img/slide3-bg.png").default, class="slide3-bg")
+
+        .slider-3-bottom
+          .row
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text Winners
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text Philosophy
+            .col-sm-12.col-md-4.overflow-hidden
+              a(href="#").slider-3_slide
+                .slider-3-photo
+                .slider-3-text History

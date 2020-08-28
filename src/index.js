@@ -8,9 +8,6 @@ import 'slick-carousel';
 
 import arrowLeft from "./img/arrow-left.svg";
 
-console.log(arrowLeft);
-
-
 const initPageSlider = () => {
 
   const $slider = $('.page-slider--js');
