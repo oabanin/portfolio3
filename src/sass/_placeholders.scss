@@ -11,6 +11,14 @@
     text-transform: uppercase;
 }
 
+%button-base-contact {
+    font-size: 14px;
+    width: 130px;
+    margin: 10px auto 24px;
+    padding:10px;
+    display: block;
+}
+
 %centered {
 	position:absolute;
 	top: 50%;
@@ -24,3 +32,4 @@
     -webkit-box-orient: vertical; /* Вертикальная ориентация */
     overflow: hidden; /* Обрезаем всё за пределами блока */
 }
+
