@@ -57,3 +57,25 @@
 .career-btn{
     @extend %button-base;
 }
+
+.todo-btn {
+    background-color: transparent;
+    border: 2px solid $color-font;
+
+    text-decoration: none;
+    color: $color-font;
+    text-align: center;
+    
+    padding: 10px;
+    width: 200px;
+   
+
+    &:hover {
+        text-decoration: none;
+        color: $color-font;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}
