@@ -7,6 +7,7 @@
 @import "~bootstrap/scss/utilities/_flex";
 @import "~bootstrap/scss/utilities/_float";
 @import "~bootstrap/scss/utilities/_clearfix";
+@import "~bootstrap/scss/utilities/_sizing";
 
 $slick-font-path: "~slick-carousel/slick/fonts/";
 $slick-loader-path: "~slick-carousel/slick/";
@@ -23,4 +24,5 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "components/_page-3-slider.scss";
 @import "components/_page-4-slider.scss";
 @import "components/_page-5-slider.scss";
+
 

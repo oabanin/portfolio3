@@ -5,9 +5,9 @@
 }
 
 %button-base {
-	display: inline-block;
+    display: inline-block;
 
-	text-decoration: none;
+    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -20,10 +20,10 @@
 }
 
 %centered {
-	position:absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 %trim-string {
@@ -33,3 +33,10 @@
     overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 
+%design-wrap {
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

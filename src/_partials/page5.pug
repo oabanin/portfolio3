@@ -1,11 +1,29 @@
+include ../_layouts/mixins.pug
+input(type='text', name='year', value='', id='tests')
 .page-slider__slide
-  .container-fluid
-    .row
-      .col-md-4.offset-md-4.d-flex.align-center
+  .container-fluid.h-100.d-flex.align-content-center.justify-content-center.flex-wrap.align-items-center
+    .row.w-100.mb-3
+      .col.d-flex.justify-content-center
         h3.todo-title You want us to do
-    .row
-      .col-md-8.offset-md-2.p-0.d-flex.justify-content-around
-        a(href="#").todo-btn App Design
-        a(href="#").todo-btn Graphic Design
-        a(href="#").todo-btn Motion Design
+    .row.w-100.mb-4
+      .col
+        .design-wrap1
+          +todo-btn('App Design','option1')
+          +todo-btn('Graphic Design','option2')
+          +todo-btn('Motion Design','option3')
+    .row.w-100.mb-4
+      .col
+        .design-wrap2
+          +todo-btn('UX Design','option4')
+          +todo-btn('Webdesign','option5')
+    .row.w-100.mb-4
+      .col.d-flex.justify-content-center
+        +todo-btn('Marketing','option6')
+    .row.w-100
+      .col
+        input(type="text", class="input-text", value="123")
+        input(type="email", class="input-email")
+
+
+
         

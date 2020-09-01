@@ -59,6 +59,7 @@
 }
 
 .todo-btn {
+    display:block;
     background-color: transparent;
     border: 2px solid $color-font;
 
@@ -69,6 +70,7 @@
     padding: 10px;
     width: 200px;
    
+    transition: background .2s linear, border .2s linear;
 
     &:hover {
         text-decoration: none;

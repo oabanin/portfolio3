@@ -2,3 +2,48 @@
     font-size: 30px;
     line-height: 2.4;
 }
+
+
+input[type="checkbox"] {
+	display:none;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: #0f33ff;
+    border-color: #0f33ff;
+}
+
+
+.design-wrap1 {
+	@extend %design-wrap;
+	max-width: 700px;
+}
+
+.design-wrap2 {
+	@extend %design-wrap;
+	max-width: 450px;
+}
+
+//DELETE
+
+
+input[name="year"]{
+	background-color:red;
+	color: orange;
+}
+
+.page-slider__slide {
+	border: 1px solid red;
+}
+
+  .container-fluid {
+  	border: 1px solid green;
+  	
+  }
+
+
+.row {
+	border: 1px solid yellow;
+}
+
+

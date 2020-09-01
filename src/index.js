@@ -16,6 +16,7 @@ const initPageSlider = () => {
     arrows: false,
     vertical: true,
     infinite: false,
+    focusOnSelect: true  //по умолчанию false, не работает фокус
   });
 
   $slider.mousewheel(function (e) {
@@ -67,5 +68,9 @@ const initWorkSlider = () => {
 $(document).ready(function () {
   initPageSlider();
   initWorkSlider();
+
+  // $('input').click(function(event){
+  //   event.target.focus();
+  // })
 });
 
