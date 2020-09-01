@@ -3,7 +3,7 @@ import './sass/style.scss';
 import $ from 'jquery';
 
 import 'jquery-mousewheel';
-import 'jquery-touchswipe';
+//import 'jquery-touchswipe';
 import 'slick-carousel';
 
 import arrowLeft from "./img/arrow-left.svg";
@@ -14,9 +14,10 @@ const initPageSlider = () => {
 
   $slider.slick({
     arrows: false,
+    touchTreshold: 800,
     vertical: true,
     infinite: false,
-    focusOnSelect: true  //по умолчанию false, не работает фокус
+    verticalSwiping:true,
   });
 
   $slider.mousewheel(function (e) {
@@ -27,19 +28,6 @@ const initPageSlider = () => {
     else {
       $(this).slick('slickPrev');
     }
-  });
-
-  $slider.swipe({
-    //Generic swipe handler for all directions
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      if (direction === "up") {
-        $(this).slick('slickNext');
-      }
-      else if (direction === "down") {
-        $(this).slick('slickPrev');
-      }
-    },
-    threshold: 50
   });
 
 
