@@ -24,13 +24,14 @@ input[type="checkbox"]:checked+label {
 	max-width: 450px;
 }
 
+
+.input-text {
+	border: 2px solid rgb(15, 51, 255);
+
+}
+
 //DELETE
 
-
-input[name="year"]{
-	background-color:red;
-	color: orange;
-}
 
 .page-slider__slide {
 	border: 1px solid red;
