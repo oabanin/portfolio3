@@ -1,28 +1,30 @@
 include ../_layouts/mixins.pug
 .page-slider__slide
   .container-fluid.h-100.d-flex.align-content-center.justify-content-center.flex-wrap.align-items-center
-    .row.w-100.mb-3
-      .col.d-flex.justify-content-center
-        h3.todo-title You want us to do
-    .row.w-100.mb-4
-      .col
-        .design-wrap1
-          +todo-btn('App Design','option1')
-          +todo-btn('Graphic Design','option2')
-          +todo-btn('Motion Design','option3')
-    .row.w-100.mb-4
-      .col
-        .design-wrap2
-          +todo-btn('UX Design','option4')
-          +todo-btn('Webdesign','option5')
-    .row.w-100.mb-4
-      .col.d-flex.justify-content-center
-        +todo-btn('Marketing','option6')
-    .row.w-100
-      .col
-        input(type="text", class="input-text", id="sss")
-        input(type="email", class="input-email")
-
-
-
-        
+    form(action="/", class="form")
+      .row.w-100.mb-3
+        .col.d-flex.justify-content-center
+          h3.todo-title You want us to do
+      .row.w-100.mb-4
+        .col
+          .design-wrap1
+            +todo-btn('App Design','option1')
+            +todo-btn('Graphic Design','option2')
+            +todo-btn('Motion Design','option3')
+      .row.w-100.mb-4
+        .col
+          .design-wrap2
+            +todo-btn('UX Design','option4')
+            +todo-btn('Webdesign','option5')
+      .row.w-100.mb-4
+        .col.d-flex.justify-content-center
+          +todo-btn('Marketing','option6')
+      .row.w-100.mb-4
+        .col
+          .design-wrap3
+            input(type="text", class="input-text", placeholder="Name")
+            input(type="email", class="input-email", placeholder="Email")
+      .row.w-100
+        .col.text-center
+          input(type="submit", class="btn-submit", value="Send request")
+      

@@ -1,4 +1,15 @@
 extends ../_layouts/home
+block header
+  header.header
+    .container-fluid
+      .row.d-flex.justify-content-between
+        .col
+          a.header__logo LOGO
+        .col
+          a.header__hire HIRE
+        .col
+          button(type="button").nav-toggle
+            span
 
 block content
   .page-slider--js

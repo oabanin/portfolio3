@@ -1,0 +1,53 @@
+.header {
+	position: absolute;
+	left:0;
+	top:0;
+	z-index:999;
+
+	width: 100%;
+	padding-top: 20px;
+}
+
+.nav-toggle {
+	margin-left: auto;
+	margin-right: 8px;
+
+	width: 30px;
+	height: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	background-color: transparent;
+	border: 0;
+
+	span, &:before, &:after {
+		width: 11px;
+		border-left: 1px solid $color-border-nav-menu;
+		border-right: 1px solid $color-border-nav-menu;
+		background-color: $color-font;
+		height: 2px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:before, &:after {
+		content:"";
+		position: relative;
+	}
+
+	&:before {
+		width:18px;
+		top: -4px;
+	}
+
+	&:after {
+		width:18px;
+		bottom: -4px;
+	}
+}
+

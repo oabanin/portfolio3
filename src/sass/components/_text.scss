@@ -4,6 +4,12 @@
     line-height: 1.1;
 }
 
+@media (max-width: 320px){
+    .text-title-lg {
+        font-size: 25px;
+    }
+}
+
 .text-title-md {
     font-size: 30px;
     line-height: 2.4;
@@ -28,3 +34,13 @@
     margin: 0;
 }
 
+.todo-title {
+    font-size: 30px;
+    line-height: 2.4;
+}
+
+@media (max-width: 320px){
+    .todo-title {
+        font-size: 18px;
+    }
+}

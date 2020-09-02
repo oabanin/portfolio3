@@ -42,5 +42,29 @@
 }
 
 %input-base {
-    
+    border: none;
+    border-bottom: 2px solid $color-font;
+    background-color: $color-bg;
+
+    width: 315px;
+
+    font-size: 30px;
+    color: $color-font;
+    line-height: 2.4;
+
+    transition: border .2s linear;
+
+    &::placeholder {
+        color: $color-font;
+    }
+    &:focus {
+        outline:none;
+        border-bottom-color: $color-accent;
+        &::placeholder {
+            color: rgb(255,255,255, .5);
+        }
+    }
+
+
+
 }

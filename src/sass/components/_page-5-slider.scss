@@ -1,7 +1,3 @@
-.todo-title {
-    font-size: 30px;
-    line-height: 2.4;
-}
 
 
 input[type="checkbox"] {
@@ -24,10 +20,43 @@ input[type="checkbox"]:checked+label {
 	max-width: 450px;
 }
 
+.design-wrap3 {
+	@extend %design-wrap;
+	max-width: 700px;
+
+}
+
+
 
 .input-text {
-	border: 2px solid rgb(15, 51, 255);
+	@extend %input-base;
 
+}
+
+.input-email {
+	@extend %input-base;
+}
+
+.btn-submit {
+	@extend %button-base;
+	background-color: $color-accent;
+	color: $color-font;
+
+	width: 100%;
+	max-width: 400px;
+	padding: 10px;
+
+	// position: relative;
+	// left: 50%;
+	// transform: translate(-50%, 0);
+}
+
+.text-center {
+	text-align:center;
+}
+
+.form {
+	width: inherit;
 }
 
 //DELETE

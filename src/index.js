@@ -13,7 +13,9 @@ const initPageSlider = () => {
   const $slider = $('.page-slider--js');
 
   $slider.slick({
+    slidesToShow: 1,
     arrows: false,
+    speed: 300,
     touchTreshold: 800,
     vertical: true,
     infinite: false,
@@ -24,9 +26,11 @@ const initPageSlider = () => {
     e.preventDefault();
     if (e.deltaY < 0) {
       $(this).slick('slickNext');
+      $(this).slick('setPosition');
     }
     else {
       $(this).slick('slickPrev');
+      $(this).slick('setPosition');
     }
   });
 
