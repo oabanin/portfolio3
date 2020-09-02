@@ -67,17 +67,47 @@
     color: $color-font;
     text-align: center;
     
+
     padding: 10px;
     width: 200px;
    
-    transition: background .2s linear, border .2s linear;
+    cursor:pointer;
 
+    transition: background .2s linear, border .2s linear;
+    
     &:hover {
         text-decoration: none;
         color: $color-font;
+        background-color: $color-accent-border-top;
     }
 
-    &:focus{
-        outline: none;
-    }
+    
+   
+}
+
+.btn-submit {
+	@extend %button-base;
+	background-color: $color-accent;
+	color: $color-font;
+
+	width: 100%;
+	max-width: 400px;
+	padding: 10px;
+
+	// position: relative;
+	// left: 50%;
+	// transform: translate(-50%, 0);
+}
+
+.header__hire-button {
+    @extend %button-base;
+
+    font-size: 14px;
+    line-height: 1;
+	background-color: $color-accent;
+    color: $color-font;
+    
+	width: 90px;
+	max-width: 90px;
+	padding: 8px;
 }

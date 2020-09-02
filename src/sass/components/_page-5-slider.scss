@@ -1,12 +1,20 @@
 
 
 input[type="checkbox"] {
-	display:none;
+	@extend %visuallyhidden;
 }
 
-input[type="checkbox"]:checked+label {
-    background-color: #0f33ff;
-    border-color: #0f33ff;
+input[type="checkbox"] {
+	&:checked+.todo-btn{
+		background-color: $color-accent;
+		border-color: $color-accent;
+		outline: none;
+		
+	}
+
+	&:focus+.todo-btn {
+		outline: $color-accent solid 5px;
+	}
 }
 
 
@@ -35,24 +43,6 @@ input[type="checkbox"]:checked+label {
 
 .input-email {
 	@extend %input-base;
-}
-
-.btn-submit {
-	@extend %button-base;
-	background-color: $color-accent;
-	color: $color-font;
-
-	width: 100%;
-	max-width: 400px;
-	padding: 10px;
-
-	// position: relative;
-	// left: 50%;
-	// transform: translate(-50%, 0);
-}
-
-.text-center {
-	text-align:center;
 }
 
 .form {

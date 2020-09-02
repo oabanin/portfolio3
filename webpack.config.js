@@ -34,6 +34,7 @@ module.exports = {
     //print: './src/print.js',
     //styles: './src/sass/style.scss'
   },
+  devtool: 'inline-source-map',
   mode: 'development',
   plugins: [
     new CleanWebpackPlugin(),
@@ -151,6 +152,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ]
       },

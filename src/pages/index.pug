@@ -4,12 +4,14 @@ block header
     .container-fluid
       .row.d-flex.justify-content-between
         .col
-          a.header__logo LOGO
-        .col
-          a.header__hire HIRE
+          a(href="#").header__logo
+            img(src=require("../../src/img/header-logo.png").default,alt="header logo")
+            span Global
+        .col.text-center
+          button(type="button").header__hire-button Hire us
         .col
           button(type="button").nav-toggle
-            span
+            span Toggle menu
 
 block content
   .page-slider--js
