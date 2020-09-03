@@ -15,6 +15,7 @@ const initPageSlider = () => {
   $slider.slick({
     slidesToShow: 1,
     arrows: false,
+    //fade: true,
     speed: 300,
     touchTreshold: 800,
     vertical: true,

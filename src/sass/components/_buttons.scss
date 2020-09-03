@@ -80,9 +80,41 @@
         color: $color-font;
         background-color: $color-accent-border-top;
     }
+    svg {
+        position: relative;
+        right: 10px;
+        bottom: 2px;
 
+        width: 0px;
+
+        transition: width .2s ease-in-out;
+
+
+    }
     
    
+}
+
+input[type="checkbox"] {
+    @extend %visuallyhidden;
+}
+
+input[type="checkbox"] {
+    &:checked+.todo-btn{
+        background-color: $color-accent;
+        border-color: $color-accent;
+        outline: none;
+
+        svg {
+            width:15px;
+            //transition: width .2s ease-in-out;
+        } 
+
+    }
+
+    &:focus+.todo-btn {
+        outline: $color-accent solid 5px;
+    }
 }
 
 .btn-submit {

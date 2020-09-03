@@ -1,21 +1,6 @@
 
 
-input[type="checkbox"] {
-	@extend %visuallyhidden;
-}
 
-input[type="checkbox"] {
-	&:checked+.todo-btn{
-		background-color: $color-accent;
-		border-color: $color-accent;
-		outline: none;
-		
-	}
-
-	&:focus+.todo-btn {
-		outline: $color-accent solid 5px;
-	}
-}
 
 
 .design-wrap1 {
