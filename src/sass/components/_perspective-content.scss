@@ -1,0 +1,12 @@
+.perspective {
+
+    &.is-active {
+        perspective: 1500px;
+        .wrapper {
+            position: absolute;
+            transform: translateZ(-1759px) translateX(-19%) rotateY(-30deg) scale(.5);
+
+        }
+    }
+}
+

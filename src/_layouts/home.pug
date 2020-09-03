@@ -6,9 +6,11 @@ html(lang="en")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap")
         title Global
     body
-      .perspective
-        block header
-        block content
+      .perspective.is-active
+        .wrapper
+          block header
+          block content
+        include ../_partials/perspective-menu
       each js in htmlWebpackPlugin.files.js
         script(type='text/javascript', src=js)
       each css in htmlWebpackPlugin.files.css
