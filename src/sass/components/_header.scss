@@ -1,3 +1,7 @@
+// .perspective {
+// 	width: 100%;
+// }
+
 .header {
 	position: absolute;
 	left:0;
@@ -56,6 +60,7 @@
 }
 
 .header__logo{
+
 	vertical-align: middle;
 	span {
 		color: $color-font;
@@ -66,9 +71,26 @@
     	text-transform: uppercase;
 
     	margin-left: 10px;
-    	// position: relative;
-    	// top:2px;
-    	transform: translate(0,-50%);
+    	position: relative;
+    	top:2px;
     	vertical-align: middle;
 	}
+}
+
+
+//DELETE
+
+
+.page-slider__slide {
+	border: 1px solid red;
+}
+
+  .container-fluid {
+  	border: 1px solid green;
+  	
+  }
+
+
+.row {
+	border: 1px solid yellow;
 }
