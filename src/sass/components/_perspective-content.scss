@@ -6,6 +6,8 @@
         perspective: 1500px;
 
         .wrapper-content {
+        	transition: transform .3s linear;
+
             outline: 30px solid #0f33ff;
     
 
@@ -14,11 +16,9 @@
             rotateY(48deg) scaleX(1.1);
 
             .wrapper-shadow {
-
-            	box-shadow: 0 0 45px 15px white;
-            	position: relative;
-			    //width: 100%;
-			    //height: 100vh;
+            	box-shadow: 0 0 45px 5px rgba(0,0,0,0.85);
+            	position: relative; //выбивает тень из потока поверх остальных блоков
+	
             }
 
         }

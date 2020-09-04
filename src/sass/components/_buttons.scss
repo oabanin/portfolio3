@@ -134,6 +134,9 @@ input[type="checkbox"] {
 .header__hire-button {
     @extend %button-base;
 
+    opacity: 0;
+    transition: opacity .3s linear;
+
     font-size: 14px;
     line-height: 1;
 	background-color: $color-accent;
@@ -142,4 +145,8 @@ input[type="checkbox"] {
 	width: 90px;
 	max-width: 90px;
 	padding: 8px;
+
+    &.active {
+        opacity: 1;
+    }
 }
