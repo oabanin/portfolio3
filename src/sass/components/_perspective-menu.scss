@@ -1,4 +1,11 @@
 .perspective__menu {
+
+    &.is_visible{
+        display:block;
+    }
+
+    display: none;
+    
     position: absolute;
     top: 50%;
     left: 60%;

@@ -7,10 +7,11 @@ html(lang="en")
         title Global
     body
       .perspective.is-active
-        .wrapper
-          block header
-          block content
-        include ../_partials/perspective-menu
+        .wrapper-content
+          .wrapper-shadow
+            block header
+            block content
+      include ../_partials/perspective-menu
       each js in htmlWebpackPlugin.files.js
         script(type='text/javascript', src=js)
       each css in htmlWebpackPlugin.files.css
