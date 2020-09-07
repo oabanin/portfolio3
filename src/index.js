@@ -13,20 +13,13 @@ const initPageSlider = () => {
   const $slider = $('.page-slider--js');
   const $navToggle = $('.nav-toggle');
   const $perspective__menu = $('.perspective__menu');
+  const $perspective__menu_li_nodes = $perspective__menu.find("li");
+
   const $perspective = $('.perspective');
   const $header__hirebutton = $('.header__hire-button');
 
-  
-
-  
-  
-
-
-
-  // children().each(function(num, node){
-  //   console.log(node);
-  // })
-
+ 
+    //Options
   $slider.slick({
     slidesToShow: 1,
     arrows: false,
@@ -38,6 +31,7 @@ const initPageSlider = () => {
     verticalSwiping: true,
   });
 
+  //On mousewheel
   $slider.mousewheel(function (e) {
     e.preventDefault();
     if (e.deltaY < 0) {
@@ -59,8 +53,40 @@ const initPageSlider = () => {
   })
 
 
-};
+  $slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+    
+    //remove headwer button on slides not equal first and last
+    //add button on first and last slides
+    const lastSlide = slick.slideCount - 1;
+    if(currentSlide !== 0 && currentSlide !== lastSlide) {
+      $header__hirebutton.addClass('active');
+    } 
+    else {
+       $header__hirebutton.removeClass('active');
+    }
 
+    //Changing active in perspective menu
+    $perspective__menu_li_nodes.removeClass('active');
+    $perspective__menu_li_nodes.eq(currentSlide).addClass('active');
+  });
+
+  //Slick slider Goto
+  $perspective__menu_li_nodes.click(function(){
+    const slideIndex = $(this).index();
+
+    //$slider.slick('slickGoTo', parseInt(slideIndex) );
+    $perspective.removeClass('is-active',1000, "easeOutSine");
+    //$perspective__menu.removeClass('is_visible');
+    
+
+
+
+  })
+
+
+}; //end initPageSlider;
+
+//slider on page2 inside slider1
 const initWorkSlider = () => {
   const $slider = $('.js-work-slider'),
     $slide1 = $slider.find('.js-slide-1').html(),
@@ -85,31 +111,6 @@ $(document).ready(function () {
   initPageSlider();
   initWorkSlider();
 
-  // $('input').click(function(event){
-  //   event.target.focus();
-  // })
 
-
-  $(window).scroll(function(a){
-    // Get container scroll position
-    var fromTop = $(this).scrollTop();
-    console.log(a);
-    // Get id of current scroll item
-    // var cur = scrollItems.map(function(){
-    //   if ($(this).offset().top < fromTop)
-    //     return this;
-    // });
-    // // Get the id of the current element
-    // cur = cur[cur.length-1];
-    // var id = cur && cur.length ? cur[0].id : "";
-    
-    // if (lastId !== id) {
-    //     lastId = id;
-    //     // Set/remove active class
-    //     menuItems
-    //       .parent().removeClass("active")
-    //       .end().filter("[href='#"+id+"']").parent().addClass("active");
-    // }                   
- });
 });
 

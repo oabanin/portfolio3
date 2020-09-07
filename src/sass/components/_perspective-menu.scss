@@ -12,11 +12,7 @@
 
     transform: translateY(-50%);
 
-    font-size: 55px;
-    font-weight: 700;
-    color: $color-font;
-    line-height: 1.7;
-    
+       
     ul {
         list-style: none;
         
@@ -40,6 +36,18 @@
 
                     transform: translateY(-10%);
                 }
+            }
+
+            button {
+                display: inline-block;
+
+                background-color: transparent;
+                border: 0;
+
+                font-size: 55px;
+                font-weight: 700;
+                color: $color-font;
+                line-height: 1.7;
             }
         }
     }
