@@ -74,9 +74,9 @@ const initPageSlider = () => {
   $perspective__menu_li_nodes.click(function(){
     const slideIndex = $(this).index();
 
-    //$slider.slick('slickGoTo', parseInt(slideIndex) );
-    $perspective.removeClass('is-active',1000, "easeOutSine");
-    //$perspective__menu.removeClass('is_visible');
+    $slider.slick('slickGoTo', parseInt(slideIndex) );
+    $perspective.removeClass('is-active');
+    $perspective__menu.removeClass('is_visible');
     
 
 
