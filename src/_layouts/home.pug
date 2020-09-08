@@ -8,10 +8,10 @@ html(lang="en")
     body
       .perspective
         .wrapper-content
-        include ../_partials/nav-menu
           .wrapper-shadow
             block header
             block content
+          include ../_partials/nav-menu
       include ../_partials/perspective-menu
       each js in htmlWebpackPlugin.files.js
         script(type='text/javascript', src=js)
