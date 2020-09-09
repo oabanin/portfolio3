@@ -15,6 +15,9 @@ const initPageSlider = () => {
   const $perspective__menu = $('.perspective__menu');
   const $perspective__menu_li_nodes = $perspective__menu.find("li");
 
+  const $navMenu_li_nodes = $('nav li');
+
+
   const $perspective = $('.perspective');
   const $header__hirebutton = $('.header__hire-button');
 
@@ -68,20 +71,43 @@ const initPageSlider = () => {
     //Changing active in perspective menu
     $perspective__menu_li_nodes.removeClass('active');
     $perspective__menu_li_nodes.eq(currentSlide).addClass('active');
+
+    //Changing active in nav-menu 
+    $navMenu_li_nodes.removeClass('active');
+    $navMenu_li_nodes.eq(currentSlide).addClass('active');
+
   });
 
-  //Slick slider Goto
-  $perspective__menu_li_nodes.click(function(){
-    const slideIndex = $(this).index();
 
+
+
+  //Perspective menu eventListener
+  $perspective__menu_li_nodes.click(function(){
+
+    const slideIndex = $(this).index();
     $slider.slick('slickGoTo', parseInt(slideIndex) );
+
+    //Changing active in perspective-menu 
     $perspective.removeClass('is-active');
     $perspective__menu.removeClass('is_visible');
-    
 
-
-
+    //Changing active in nav-menu 
+    $navMenu_li_nodes.removeClass('active');
+    $navMenu_li_nodes.eq(slideIndex).addClass('active');
   })
+
+  //Nav Menu eventListener
+  $navMenu_li_nodes.click(function(){
+
+    console.log($slider);
+
+    const slideIndex = $(this).index();
+    $slider.slick('slickGoTo', parseInt(slideIndex) );
+
+    //Changing active in nav-menu 
+    $navMenu_li_nodes.removeClass('active');
+    $navMenu_li_nodes.eq(slideIndex).addClass('active');
+  });
 
 
 }; //end initPageSlider;

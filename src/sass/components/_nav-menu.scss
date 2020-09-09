@@ -1,4 +1,4 @@
-.nav-menu {
+nav {
 	position: absolute;
 	left: 15px;
 	top: 0;
@@ -46,21 +46,69 @@
 		list-style-position: inside;
 
 		li {
+			position: relative;
 			font-size: 6px;
+
+			transition: color .3s linear;
 
 			button {
 				position: relative;
 				top: 3px;
+				left: 3px;
 				
 				font-size: 14px;
 				color: $color-font;
 
 				background-color: transparent;
 				border: 0;
+
+				opacity:0;
+
+				&:active, &:focus {
+					outline:none;
+				}
+
+				
 			}
 
-			&:before {
-				content: '01';
+			@for $i from 1 through 9 {
+			  &:nth-child(#{$i}):before {
+			    content:'0#{$i}';
+			    position: absolute;
+			    top: 4px;
+			    
+			    color: #555;
+			    font-size: 14px;
+			    font-weight: 300;
+
+
+			  }
+
+  			//   &:nth-child(#{$i}):active:before {
+		   //  	outline: 2px solid #00f;
+			  //  }
+			  // &:nth-child(#{$i}):focus:before {
+		   //  	outline: 2px solid #00f;
+			  //  }
+			}
+
+			&.active {
+				color: $color-accent;
+
+				button{
+					opacity: 1;
+					transition: opacity 1.4s linear;
+
+				}
+
+				@for $i from 1 through 9 {
+			  		&:nth-child(#{$i}):before {
+			  			left: -30px;
+			  			color: $color-font;
+
+			  		}
+				}
+
 			}
 		}
 	}
